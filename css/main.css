@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 400px;
+  }
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.container .quote {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: gray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container .quote p {
+  word-wrap: break-word;
+}
+
+.container .search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container .search input {
+  border: none;
+  outline: none;
+  color: cadetblue;
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.container .search input::selection {
+  color: cadetblue;
+}
+
+.container .search button {
+  width: fit-content;
+  border: none;
+  outline: none;
+  color: cadetblue;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: cadetblue;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .meals {
+    grid-template-columns: auto;
+  }
+}
+
+.meals .meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 750px) {
+  .meals .meal {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.meal img {
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.meal p {
+  font-size: medium;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.meal button {
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 15px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.meal button:hover {
+  opacity: 0.8;
+}
+
+.about-meal {
+  z-index: 5;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  position: fixed;
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: cadetblue;
+  color: white;
+}
+
+#instructions {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+#instructions::-webkit-scrollbar {
+  display: none;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+}
+
+#name {
+  margin-top: 15px;
+  font-weight: 900;
+  font-size: x-large;
+  text-transform: capitalize;
+}
+
+#area {
+  background-color: white;
+  color: cadetblue;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.about-meal img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+#youtube-meal {
+  text-decoration: none;
+  opacity: 1;
+  transform: scale(1, 1);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+
+#youtube-meal:hover {
+  transform: scale(1.2, 1.2);
+  opacity: 0.7;
+}
+
+.no-result {
+  display: none;
+  color: rgb(223, 30, 30);
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}

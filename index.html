@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Food Recipe App</title>
+  </head>
+
+  <body>
+    <div class="about-meal">
+      <span id="close">X</span>
+      <p id="name"></p>
+      <p id="area"></p>
+      <p style="font-weight: 600; font-size: medium">-Instructions-</p>
+      <p id="instructions"></p>
+      <img id="imag-meal" src="" alt="" />
+      <a id="youtube-meal" target="_blank" href="#">Watch Video</a>
+    </div>
+    <div class="container">
+      <h2>find meals for your ingredient</h2>
+      <div class="quote">
+        <p>Real food dosen't have ingredient, real food is ingredient</p>
+        <span>-Jamie Oiver</span>
+      </div>
+      <div class="search">
+        <input id="input-meal" type="text" placeholder="Enter an ingredient" />
+        <button id="input-button" type="button">Search</button>
+      </div>
+      <div class="result">
+        <h2>-Your Result-</h2>
+        <div id="no-res" class="no-result"></div>
+        <div class="meals"></div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
